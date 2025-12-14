@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/images/logo/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/color/96/000000/storytelling.png">
 </head>
 <body>
     <!-- 네비게이션 -->
@@ -37,6 +38,11 @@
 
     <!-- 히어로 섹션 -->
     <section class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-digital-wireframe-technology-background-1295-large.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="gradient-text">스토리가</span>
@@ -125,21 +131,21 @@
             <h2 class="section-title">우리가 특별한 이유</h2>
             <div class="differentiator-list">
                 <div class="differentiator-item">
-                    <div class="diff-icon">🎯</div>
+                    <div class="diff-icon"><i class="fas fa-bullseye"></i></div>
                     <div class="diff-content">
                         <h3>전략 선행 디자인</h3>
                         <p>디자인 전에 먼저 브랜드 전략을 수립합니다. 모든 디자인 결정에는 마케팅적 이유가 존재합니다.</p>
                     </div>
                 </div>
                 <div class="differentiator-item">
-                    <div class="diff-icon">📈</div>
+                    <div class="diff-icon"><i class="fas fa-chart-line"></i></div>
                     <div class="diff-content">
                         <h3>판매 결과 중심</h3>
                         <p>아름다움보다 기능성과 전환율에 중점을 둡니다. 모든 작업의 최종 목표는 매출 증대입니다.</p>
                     </div>
                 </div>
                 <div class="differentiator-item">
-                    <div class="diff-icon">🤝</div>
+                    <div class="diff-icon"><i class="fas fa-handshake"></i></div>
                     <div class="diff-content">
                         <h3>파트너십 접근</h3>
                         <p>일회성 작업이 아닌, 장기적 성장을 위한 파트너로서 고객의 비즈니스에 깊이 관여합니다.</p>
@@ -166,7 +172,7 @@
                         <label class="option-card">
                             <input type="radio" name="business-type" value="product" required>
                             <div class="option-content">
-                                <div class="option-icon">📦</div>
+                                <div class="option-icon"><i class="fas fa-box"></i></div>
                                 <h4>제품 판매</h4>
                                 <p>물리적 또는 디지털 제품을 판매합니다</p>
                             </div>
@@ -175,7 +181,7 @@
                         <label class="option-card">
                             <input type="radio" name="business-type" value="service" required>
                             <div class="option-content">
-                                <div class="option-icon">💼</div>
+                                <div class="option-icon"><i class="fas fa-briefcase"></i></div>
                                 <h4>서비스 제공</h4>
                                 <p>컨설팅, 교육 등 전문 서비스를 제공합니다</p>
                             </div>
@@ -184,7 +190,7 @@
                         <label class="option-card">
                             <input type="radio" name="business-type" value="both" required>
                             <div class="option-content">
-                                <div class="option-icon">🔄</div>
+                                <div class="option-icon"><i class="fas fa-sync-alt"></i></div>
                                 <h4>제품 + 서비스</h4>
                                 <p>제품과 서비스를 함께 제공합니다</p>
                             </div>
