@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="../assets/images/logo/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/color/96/000000/storytelling.png">
 </head>
 <body>
     <!-- 네비게이션 -->
@@ -48,31 +49,31 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-card">
-                    <div class="contact-icon">📧</div>
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                     <h3>이메일</h3>
                     <p>contact@framestory.com</p>
-                    <a href="mailto:contact@framestory.com" class="contact-link">메일 보내기 →</a>
+                    <a href="mailto:contact@framestory.com" class="contact-link">메일 보내기 <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="contact-card">
-                    <div class="contact-icon">📞</div>
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
                     <h3>전화</h3>
                     <p>02-1234-5678</p>
-                    <a href="tel:02-1234-5678" class="contact-link">전화 걸기 →</a>
+                    <a href="tel:02-1234-5678" class="contact-link">전화 걸기 <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="contact-card">
-                    <div class="contact-icon">📍</div>
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <h3>오피스</h3>
                     <p>서울특별시 강남구 테헤란로 123<br>프레임스토리 빌딩 15층</p>
-                    <a href="https://maps.google.com" target="_blank" class="contact-link">지도 보기 →</a>
+                    <a href="https://maps.google.com/?q=서울특별시+강남구+테헤란로+123" target="_blank" class="contact-link">지도 보기 <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="contact-card">
-                    <div class="contact-icon">🕒</div>
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
                     <h3>영업 시간</h3>
                     <p>월-금: 9:00 - 18:00<br>토-일: 예약제 상담</p>
-                    <a href="#" class="contact-link">상담 예약하기 →</a>
+                    <a href="#consultation-form" class="contact-link">상담 예약하기 <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -89,27 +90,27 @@
                 
                 <form id="consultation-form" class="contact-form">
                     <div class="form-group">
-                        <label for="name">이름 *</label>
+                        <label for="name"><i class="fas fa-user" style="margin-right: 8px;"></i>이름 *</label>
                         <input type="text" id="name" name="name" required placeholder="성함을 입력해주세요">
                     </div>
                     
                     <div class="form-group">
-                        <label for="company">회사명 *</label>
+                        <label for="company"><i class="fas fa-building" style="margin-right: 8px;"></i>회사명 *</label>
                         <input type="text" id="company" name="company" required placeholder="회사명을 입력해주세요">
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">이메일 *</label>
+                        <label for="email"><i class="fas fa-envelope" style="margin-right: 8px;"></i>이메일 *</label>
                         <input type="email" id="email" name="email" required placeholder="이메일 주소를 입력해주세요">
                     </div>
                     
                     <div class="form-group">
-                        <label for="phone">전화번호</label>
+                        <label for="phone"><i class="fas fa-phone" style="margin-right: 8px;"></i>전화번호</label>
                         <input type="tel" id="phone" name="phone" placeholder="전화번호를 입력해주세요">
                     </div>
                     
                     <div class="form-group">
-                        <label for="service">관심 서비스 *</label>
+                        <label for="service"><i class="fas fa-cogs" style="margin-right: 8px;"></i>관심 서비스 *</label>
                         <select id="service" name="service" required>
                             <option value="">서비스를 선택해주세요</option>
                             <option value="storyframe">StoryFrame (브랜드 스토리 개발)</option>
@@ -122,7 +123,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="budget">예상 예산</label>
+                        <label for="budget"><i class="fas fa-wallet" style="margin-right: 8px;"></i>예상 예산</label>
                         <select id="budget" name="budget">
                             <option value="">예산 범위를 선택해주세요</option>
                             <option value="5m">500만원 미만</option>
@@ -135,7 +136,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="timeline">희망 일정</label>
+                        <label for="timeline"><i class="fas fa-calendar-alt" style="margin-right: 8px;"></i>희망 일정</label>
                         <select id="timeline" name="timeline">
                             <option value="">일정을 선택해주세요</option>
                             <option value="asap">가능한 빨리 시작</option>
@@ -147,14 +148,14 @@
                     </div>
                     
                     <div class="form-group full-width">
-                        <label for="message">프로젝트 요구사항 *</label>
+                        <label for="message"><i class="fas fa-comment-dots" style="margin-right: 8px;"></i>프로젝트 요구사항 *</label>
                         <textarea id="message" name="message" required rows="5" placeholder="비즈니스에 대해 간략히 소개해주세요. 현재 직면한 과제나 원하는 결과가 있다면 함께 알려주세요."></textarea>
                     </div>
                     
                     <div class="form-group full-width">
                         <label class="checkbox-label">
                             <input type="checkbox" name="privacy" required>
-                            <span>개인정보 처리방침에 동의합니다</span>
+                            <span><i class="fas fa-shield-alt" style="margin-right: 8px;"></i>개인정보 처리방침에 동의합니다</span>
                         </label>
                         <a href="#" class="privacy-link">개인정보 처리방침 보기</a>
                     </div>
@@ -162,15 +163,17 @@
                     <div class="form-group full-width">
                         <label class="checkbox-label">
                             <input type="checkbox" name="newsletter">
-                            <span>FrameStory의 뉴스레터 구독 (선택)</span>
+                            <span><i class="fas fa-newspaper" style="margin-right: 8px;"></i>FrameStory의 뉴스레터 구독 (선택)</span>
                         </label>
                     </div>
                     
-                    <button type="submit" class="btn-primary btn-large">상담 예약하기</button>
+                    <button type="submit" class="btn-primary btn-large">
+                        <i class="fas fa-paper-plane" style="margin-right: 10px;"></i>상담 예약하기
+                    </button>
                 </form>
                 
                 <div class="form-note">
-                    <p>상담 예약 완료 후, 24시간 이내에 담당자가 연락을 드립니다.<br>긴급한 문의사항은 전화로 연락 부탁드립니다.</p>
+                    <p><i class="fas fa-info-circle" style="margin-right: 8px;"></i>상담 예약 완료 후, 24시간 이내에 담당자가 연락을 드립니다.<br>긴급한 문의사항은 전화로 연락 부탁드립니다.</p>
                 </div>
             </div>
         </div>
@@ -188,7 +191,7 @@
                     <p>폼 작성 또는 전화로 상담 신청</p>
                 </div>
                 
-                <div class="step-arrow">→</div>
+                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
                 
                 <div class="process-step">
                     <div class="step-number">2</div>
@@ -196,7 +199,7 @@
                     <p>24시간 이내 전문 담당자 배정</p>
                 </div>
                 
-                <div class="step-arrow">→</div>
+                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
                 
                 <div class="process-step">
                     <div class="step-number">3</div>
@@ -204,7 +207,7 @@
                     <p>비즈니스 분석 및 준비</p>
                 </div>
                 
-                <div class="step-arrow">→</div>
+                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
                 
                 <div class="process-step">
                     <div class="step-number">4</div>
@@ -212,7 +215,7 @@
                     <p>30분 무료 상담 진행</p>
                 </div>
                 
-                <div class="step-arrow">→</div>
+                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
                 
                 <div class="process-step">
                     <div class="step-number">5</div>
@@ -229,20 +232,27 @@
             <h2 class="section-title">찾아오시는 길</h2>
             
             <div class="map-container">
-                <!-- 실제 지도는 Google Maps API로 구현 -->
                 <div class="map-placeholder">
                     <div class="map-overlay">
-                        <h3>FrameStory 오피스</h3>
+                        <h3><i class="fas fa-map-pin" style="margin-right: 10px;"></i>FrameStory 오피스</h3>
                         <p>서울특별시 강남구 테헤란로 123<br>프레임스토리 빌딩 15층</p>
                         <div class="transport-info">
                             <div class="transport">
-                                <strong>지하철</strong>
+                                <strong><i class="fas fa-subway" style="margin-right: 8px;"></i>지하철</strong>
                                 <p>2호선 강남역 11번 출구 도보 5분</p>
                             </div>
                             <div class="transport">
-                                <strong>주차</strong>
+                                <strong><i class="fas fa-car" style="margin-right: 8px;"></i>주차</strong>
                                 <p>건물 지하주차장 이용 가능</p>
                             </div>
+                        </div>
+                        <div class="map-actions">
+                            <a href="https://maps.google.com/?q=서울특별시+강남구+테헤란로+123" 
+                               target="_blank" 
+                               class="btn-primary"
+                               style="margin-top: 20px;">
+                                <i class="fas fa-map-marked-alt" style="margin-right: 8px;"></i>Google 지도에서 보기
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -250,20 +260,20 @@
             
             <div class="location-info">
                 <div class="info-card">
-                    <h3>버스로 오시는 길</h3>
+                    <h3><i class="fas fa-bus" style="margin-right: 10px;"></i>버스로 오시는 길</h3>
                     <ul>
-                        <li>간선: 146, 340, 360, 740</li>
-                        <li>지선: 2415, 6411, 4318</li>
-                        <li>광역: 9403, 9507, 9607</li>
+                        <li><i class="fas fa-circle" style="color: #C62828; font-size: 8px; margin-right: 10px;"></i>간선: 146, 340, 360, 740</li>
+                        <li><i class="fas fa-circle" style="color: #C62828; font-size: 8px; margin-right: 10px;"></i>지선: 2415, 6411, 4318</li>
+                        <li><i class="fas fa-circle" style="color: #C62828; font-size: 8px; margin-right: 10px;"></i>광역: 9403, 9507, 9607</li>
                     </ul>
                 </div>
                 
                 <div class="info-card">
-                    <h3>상담실 이용 안내</h3>
+                    <h3><i class="fas fa-info-circle" style="margin-right: 10px;"></i>상담실 이용 안내</h3>
                     <ul>
-                        <li>방문 상담은 예약제로 운영</li>
-                        <li>주차권은 접수처에서 발급</li>
-                        <li>비즈니스 캐주얼 복장</li>
+                        <li><i class="fas fa-calendar-check" style="color: #1A237E; margin-right: 10px;"></i>방문 상담은 예약제로 운영</li>
+                        <li><i class="fas fa-parking" style="color: #1A237E; margin-right: 10px;"></i>주차권은 접수처에서 발급</li>
+                        <li><i class="fas fa-tshirt" style="color: #1A237E; margin-right: 10px;"></i>비즈니스 캐주얼 복장</li>
                     </ul>
                 </div>
             </div>
@@ -278,6 +288,7 @@
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question">
+                        <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
                         상담은 무료인가요?
                         <span class="faq-icon">+</span>
                     </button>
@@ -288,6 +299,7 @@
                 
                 <div class="faq-item">
                     <button class="faq-question">
+                        <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
                         상담은 어떤 방식으로 진행되나요?
                         <span class="faq-icon">+</span>
                     </button>
@@ -298,22 +310,24 @@
                 
                 <div class="faq-item">
                     <button class="faq-question">
+                        <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
                         상담 전 준비해야 할 것이 있나요?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
                         <p>다음 정보를 준비해주시면 더 효과적인 상담이 가능합니다:</p>
                         <ul>
-                            <li>비즈니스 설명 자료 (있을 경우)</li>
-                            <li>현재 웹사이트 또는 마케팅 자료</li>
-                            <li>희망하는 목표와 기대 효과</li>
-                            <li>예산과 일정에 관한 생각</li>
+                            <li><i class="fas fa-file-alt" style="color: #C62828; margin-right: 8px;"></i>비즈니스 설명 자료 (있을 경우)</li>
+                            <li><i class="fas fa-globe" style="color: #C62828; margin-right: 8px;"></i>현재 웹사이트 또는 마케팅 자료</li>
+                            <li><i class="fas fa-bullseye" style="color: #C62828; margin-right: 8px;"></i>희망하는 목표와 기대 효과</li>
+                            <li><i class="fas fa-calendar" style="color: #C62828; margin-right: 8px;"></i>예산과 일정에 관한 생각</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question">
+                        <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
                         상담 후 제안서는 언제 받을 수 있나요?
                         <span class="faq-icon">+</span>
                     </button>
@@ -324,6 +338,7 @@
                 
                 <div class="faq-item">
                     <button class="faq-question">
+                        <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
                         긴급한 문의는 어떻게 하나요?
                         <span class="faq-icon">+</span>
                     </button>
@@ -340,7 +355,9 @@
         <div class="container">
             <h2>지금 바로 상담을 시작하세요</h2>
             <p>브랜드 스토리가 비즈니스 성공으로 이어지는 여정을 함께해요.</p>
-            <a href="#consultation-form" class="btn-primary btn-xlarge">상담 신청하기</a>
+            <a href="#consultation-form" class="btn-primary btn-xlarge">
+                <i class="fas fa-calendar-check" style="margin-right: 15px;"></i>상담 신청하기
+            </a>
         </div>
     </section>
 
@@ -384,8 +401,8 @@
             <div class="footer-bottom">
                 <p>© 2023 FrameStory. All rights reserved.</p>
                 <div class="footer-contacts">
-                    <span>contact@framestory.com</span>
-                    <span>02-1234-5678</span>
+                    <span><i class="fas fa-envelope" style="margin-right: 8px;"></i>contact@framestory.com</span>
+                    <span><i class="fas fa-phone" style="margin-right: 8px;"></i>02-1234-5678</span>
                 </div>
             </div>
         </div>
@@ -396,7 +413,7 @@
         <div class="modal-content">
             <button class="modal-close">&times;</button>
             <div class="modal-body">
-                <div class="success-icon">✓</div>
+                <div class="success-icon"><i class="fas fa-check-circle"></i></div>
                 <h3>상담 신청 완료!</h3>
                 <p>상담 신청이 성공적으로 접수되었습니다.<br>24시간 이내 담당자가 연락을 드리겠습니다.</p>
                 <button class="btn-primary modal-confirm">확인</button>
@@ -407,4 +424,4 @@
     <script src="../js/main.js"></script>
     <script src="../js/contact.js"></script>
 </body>
-</html>
+                            </html>
