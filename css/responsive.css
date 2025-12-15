@@ -1,209 +1,126 @@
-/* responsive.css - 반응형 웹 디자인 스타일 */
+/* responsive.css */
 
-/* ============================================
-   기본 반응형 설정
-   ============================================ */
-
-/* 모바일 퍼스트 접근법: 기본 스타일은 모바일용 */
-
-img, video {
-    max-width: 100%; /* 이미지와 비디오가 컨테이너를 넘지 않도록 */
-    height: auto; /* 비율 유지 */
+/* 태블릿 (768px ~ 1024px) */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-visual {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    transform: none;
+    top: auto;
+    right: auto;
+  }
+  
+  .philosophy-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* ============================================
-   미디어 쿼리 - 화면 크기별 조정
-   ============================================ */
-
-/* 작은 태블릿 (768px 이상) */
-@media (min-width: 768px) {
-    /* 예시: 네비게이션 바 변경 */
-    .nav-menu {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .nav-toggle {
-        display: none; /* 모바일용 토글 버튼 숨김 */
-    }
-
-    /* 예시: 그리드 레이아웃 조정 */
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 2열 그리드 */
-        gap: 20px;
-    }
-
-    /* 예시: 폰트 크기 증가 */
-    body {
-        font-size: 16px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-}
-
-/* 데스크탑 (1024px 이상) */
-@media (min-width: 1024px) {
-    /* 예시: 더 넓은 그리드 */
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr); /* 3열 그리드 */
-        gap: 30px;
-    }
-
-    /* 예시: 최대 너비 설정 및 중앙 정렬 */
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    /* 예시: 헤더 레이아웃 변경 */
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-}
-
-/* 큰 데스크탑 (1440px 이상) */
-@media (min-width: 1440px) {
-    /* 예시: 더 큰 여백과 폰트 크기 */
-    .container {
-        max-width: 1400px;
-    }
-
-    body {
-        font-size: 18px;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-}
-
-/* ============================================
-   특수 상황을 위한 미디어 쿼리
-   ============================================ */
-
-/* 높이가 매우 작은 화면 (세로 모드 스마트폰 등) */
-@media (max-height: 500px) and (orientation: landscape) {
-    .header {
-        padding: 10px 0;
-    }
-
-    .hero-section {
-        min-height: 300px; /* 히어로 섹션 높이 줄임 */
-    }
-}
-
-/* 다크 모드 지원 */
-@media (prefers-color-scheme: dark) {
-    /* 여기에 다크 모드 스타일 추가 */
-    body {
-        background-color: #121212;
-        color: #e0e0e0;
-    }
-}
-
-/* 고대비 모드 지원 */
-@media (prefers-contrast: high) {
-    /* 대비를 높이는 스타일 추가 */
-    .btn {
-        border: 2px solid currentColor;
-    }
-}
-
-/* ============================================
-   유틸리티 클래스 (재사용 가능한 반응형 클래스)
-   ============================================ */
-
-/* 모바일에서만 보이기 */
-.mobile-only {
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--color-white);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .menu-toggle {
     display: block;
-}
-@media (min-width: 768px) {
-    .mobile-only {
-        display: none;
-    }
-}
-
-/* 데스크탑에서만 보이기 */
-.desktop-only {
-    display: none;
-}
-@media (min-width: 1024px) {
-    .desktop-only {
-        display: block;
-    }
-}
-
-/* 반응형 숨김/표시 클래스 */
-.hide-on-mobile {
-    display: none;
-}
-@media (min-width: 768px) {
-    .hide-on-mobile {
-        display: block;
-    }
-}
-
-/* ============================================
-   반응형 테이블
-   ============================================ */
-@media (max-width: 767px) {
-    .responsive-table {
-        overflow-x: auto; /* 작은 화면에서 테이블 가로 스크롤 */
-        -webkit-overflow-scrolling: touch;
-    }
-
-    table {
-        min-width: 600px; /* 테이블 최소 너비 보장 */
-    }
-}
-
-/* ============================================
-   반응형 폼 요소
-   ============================================ */
-@media (max-width: 767px) {
-    input, textarea, select {
-        font-size: 16px; /* iOS에서 확대 방지 */
-    }
-
-    .form-row {
-        flex-direction: column; /* 폼 요소 세로 정렬 */
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-        width: 100%;
-    }
+  }
+  
+  .hero-section {
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .philosophy-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-section {
+    padding: 30px 20px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .checkbox-group-grid,
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
-/* ============================================
-   프린트 스타일
-   ============================================ */
-@media print {
-    /* 프린트시 불필요한 요소 숨기기 */
-    .no-print {
-        display: none !important;
-    }
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .form-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 
-    /* 링크 URL 표시 */
-    a[href]::after {
-        content: " (" attr(href) ")";
-    }
-
-    /* 페이지 나눔 조정 */
-    h1, h2, h3 {
-        page-break-after: avoid;
-    }
-
-    img {
-        page-break-inside: avoid;
-    }
+/* 다크 모드 대응 (옵션) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #FFFFFF;
+    --color-secondary: #CCCCCC;
+    --color-light: #1A1A1A;
+    --color-white: #2D2D2D;
+    --color-border: #444444;
+  }
+  
+  /* 입력 필드는 여전히 밝게 유지 */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: #FFFFFF !important;
+    color: #333333 !important;
+  }
 }
