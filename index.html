@@ -3,260 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrameStory - 브랜드 스토리를 판매로 연결하다</title>
+    <title>ashop - 브랜딩을 위한 전략적 홈페이지</title>
+    
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="https://img.icons8.com/color/96/000000/storytelling.png">
+    
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/svg+xml" href="assets/ashop-logo.svg">
 </head>
 <body>
-    <!-- 네비게이션 -->
-    <nav class="navbar">
+    <!-- 헤더 -->
+    <header class="main-header">
         <div class="container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">FS</span>
-                <span class="logo-text">FrameStory</span>
-            </a>
-            <div class="nav-menu">
-                <a href="pages/about.html">소개</a>
-                <a href="pages/services.html">서비스</a>
-                <a href="pages/process.html">프로세스</a>
-                <a href="pages/portfolio.html">포트폴리오</a>
-                <a href="pages/pricing.html">가격</a>
-                <a href="pages/contact.html" class="btn-primary">무료상담</a>
-            </div>
-            <button class="mobile-menu-btn" aria-label="메뉴">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <nav class="navbar">
+                <a href="/" class="logo">
+                    <span class="logo-mark">a</span>
+                    <span class="logo-text">shop</span>
+                </a>
+                
+                <div class="nav-menu">
+                    <a href="#philosophy" class="nav-link">철학</a>
+                    <a href="#services" class="nav-link">서비스</a>
+                    <a href="#process" class="nav-link">프로세스</a>
+                    <a href="#estimate" class="nav-link nav-btn">무료 견적</a>
+                </div>
+                
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- 히어로 섹션 -->
-    <section class="hero">
-        <div class="hero-video">
-            <video autoplay muted loop playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-digital-wireframe-technology-background-1295-large.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="gradient-text">스토리가</span>
-                <span class="hero-highlight">판매</span>
-                <span class="gradient-text">로 이어지는</span>
-                <br>
-                <span class="hero-subtitle">디지털 프레임워크</span>
-            </h1>
-            <p class="hero-description">
-                단순한 웹사이트 제작이 아닌, 브랜드 내러티브를 기반으로 한
-                <br>
-                종합적 판매 전략 시스템을 구축합니다
-            </p>
-            <div class="hero-buttons">
-                <a href="#project-starter" class="btn-primary btn-large">프로젝트 시작</a>
-                <a href="pages/portfolio.html" class="btn-secondary btn-large">사례 보기</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="visual-frame">
-                <div class="frame-item story">브랜드 스토리</div>
-                <div class="frame-arrow">→</div>
-                <div class="frame-item strategy">마케팅 전략</div>
-                <div class="frame-arrow">→</div>
-                <div class="frame-item website">웹사이트</div>
-                <div class="frame-arrow">→</div>
-                <div class="frame-item result">판매 성과</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3가지 프레임워크 -->
-    <section class="frameworks">
+    <section class="hero-section">
         <div class="container">
-            <h2 class="section-title">FrameStory의 3가지 프레임워크</h2>
-            <div class="framework-grid">
-                <article class="framework-card">
-                    <div class="card-number">01</div>
-                    <h3 class="card-title">StoryFrame</h3>
-                    <p class="card-description">
-                        고객사의 핵심 가치와 차별점을 분석하여
-                        설득력 있는 브랜드 내러티브를 구성합니다.
-                        모든 전략의 출발점이 되는 이야기를 만듭니다.
-                    </p>
-                    <ul class="card-features">
-                        <li>브랜드 정체성 정의</li>
-                        <li>타겟 고객 프로파일링</li>
-                        <li>가치 제안 메시지 개발</li>
-                    </ul>
-                </article>
-                
-                <article class="framework-card">
-                    <div class="card-number">02</div>
-                    <h3 class="card-title">StrategyFrame</h3>
-                    <p class="card-description">
-                        브랜드 스토리를 기반으로 한 마케팅, 영업, 홍보 전략을
-                        설계합니다. 각 채널별 메시지와 실행 방안을 구체화합니다.
-                    </p>
-                    <ul class="card-features">
-                        <li>마케팅 채널 전략</li>
-                        <li>콘텐츠 로드맵 수립</li>
-                        <li>전환율 최적화 계획</li>
-                    </ul>
-                </article>
-                
-                <article class="framework-card">
-                    <div class="card-number">03</div>
-                    <h3 class="card-title">WebFrame</h3>
-                    <p class="card-description">
-                        설계된 전략을 구현하는 최적화된 디지털 프레임을 개발합니다.
-                        단순한 웹사이트가 아닌, 판매를 창출하는 시스템입니다.
-                    </p>
-                    <ul class="card-features">
-                        <li>반응형 웹사이트 개발</li>
-                        <li>사용자 경로 최적화</li>
-                        <li>분석 및 개선 시스템</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- 차별점 -->
-    <section class="differentiators bg-light">
-        <div class="container">
-            <h2 class="section-title">우리가 특별한 이유</h2>
-            <div class="differentiator-list">
-                <div class="differentiator-item">
-                    <div class="diff-icon"><i class="fas fa-bullseye"></i></div>
-                    <div class="diff-content">
-                        <h3>전략 선행 디자인</h3>
-                        <p>디자인 전에 먼저 브랜드 전략을 수립합니다. 모든 디자인 결정에는 마케팅적 이유가 존재합니다.</p>
-                    </div>
-                </div>
-                <div class="differentiator-item">
-                    <div class="diff-icon"><i class="fas fa-chart-line"></i></div>
-                    <div class="diff-content">
-                        <h3>판매 결과 중심</h3>
-                        <p>아름다움보다 기능성과 전환율에 중점을 둡니다. 모든 작업의 최종 목표는 매출 증대입니다.</p>
-                    </div>
-                </div>
-                <div class="differentiator-item">
-                    <div class="diff-icon"><i class="fas fa-handshake"></i></div>
-                    <div class="diff-content">
-                        <h3>파트너십 접근</h3>
-                        <p>일회성 작업이 아닌, 장기적 성장을 위한 파트너로서 고객의 비즈니스에 깊이 관여합니다.</p>
-                    </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Building Brands<br><span class="highlight">That Matter</span></h1>
+                <p class="hero-subtitle">
+                    홈페이지 제작이 아닌, <strong>브랜딩을 위한 홈페이지</strong>를 만듭니다.<br>
+                    마케팅과 영업을 이끌어내는 전략적 디지털 존재감을 설계합니다.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#estimate" class="btn-primary">
+                        <i class="fas fa-file-alt"></i> 무료 견적 신청
+                    </a>
+                    <a href="#philosophy" class="btn-secondary">
+                        <i class="fas fa-play-circle"></i> 우리의 철학 보기
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 프로젝트 시작 (5단계 설문) -->
-    <section id="project-starter" class="project-starter">
-        <div class="container">
-            <h2 class="section-title">프로젝트 시작하기</h2>
-            <p class="section-subtitle">5단계 간단 설문으로 맞춤형 제안서를 받아보세요</p>
             
-            <form id="project-form" class="project-form">
-                <!-- 단계 1 -->
-                <div class="form-step active" data-step="1">
-                    <div class="step-header">
-                        <span class="step-count">STEP 1</span>
-                        <h3>어떤 비즈니스를 운영하고 계신가요?</h3>
-                    </div>
-                    <div class="option-grid">
-                        <label class="option-card">
-                            <input type="radio" name="business-type" value="product" required>
-                            <div class="option-content">
-                                <div class="option-icon"><i class="fas fa-box"></i></div>
-                                <h4>제품 판매</h4>
-                                <p>물리적 또는 디지털 제품을 판매합니다</p>
-                            </div>
-                        </label>
-                        
-                        <label class="option-card">
-                            <input type="radio" name="business-type" value="service" required>
-                            <div class="option-content">
-                                <div class="option-icon"><i class="fas fa-briefcase"></i></div>
-                                <h4>서비스 제공</h4>
-                                <p>컨설팅, 교육 등 전문 서비스를 제공합니다</p>
-                            </div>
-                        </label>
-                        
-                        <label class="option-card">
-                            <input type="radio" name="business-type" value="both" required>
-                            <div class="option-content">
-                                <div class="option-icon"><i class="fas fa-sync-alt"></i></div>
-                                <h4>제품 + 서비스</h4>
-                                <p>제품과 서비스를 함께 제공합니다</p>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-                
-                <!-- 단계 2-5는 JS에서 동적 생성 -->
-                
-                <div class="form-navigation">
-                    <button type="button" class="btn-secondary" id="prev-btn" disabled>이전</button>
-                    <div class="step-indicator">
-                        <span class="step-dot active"></span>
-                        <span class="step-dot"></span>
-                        <span class="step-dot"></span>
-                        <span class="step-dot"></span>
-                        <span class="step-dot"></span>
-                    </div>
-                    <button type="button" class="btn-primary" id="next-btn">다음</button>
-                </div>
-                
-                <div class="form-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 20%"></div>
-                    </div>
-                    <span class="progress-text">1/5 단계</span>
-                </div>
-            </form>
-            
-            <p class="form-note">
-                모든 정보는 상담 목적으로만 사용되며, 제출 완료 시 맞춤형 제안서를 이메일로 발송해 드립니다.
-            </p>
-        </div>
-    </section>
-
-    <!-- 고객 성과 -->
-    <section class="results">
-        <div class="container">
-            <h2 class="section-title">FrameStory의 성과</h2>
-            <div class="results-grid">
-                <div class="result-card">
-                    <div class="result-number">+217%</div>
-                    <p class="result-desc">평균 전환율 향상</p>
-                </div>
-                <div class="result-card">
-                    <div class="result-number">98%</div>
-                    <p class="result-desc">고객 만족도</p>
-                </div>
-                <div class="result-card">
-                    <div class="result-number">42</div>
-                    <p class="result-desc">성공 프로젝트</p>
-                </div>
-                <div class="result-card">
-                    <div class="result-number">3.2배</div>
-                    <p class="result-desc">평균 ROI</p>
-                </div>
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                     alt="브랜드 전략 워크샵" class="hero-image" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta">
+    <!-- 브랜드 철학 섹션 -->
+    <section class="philosophy-section" id="philosophy">
         <div class="container">
-            <h2>지금 시작하세요</h2>
-            <p>브랜드 스토리가 실제 판매로 이어지는 여정을 함께해보세요</p>
-            <a href="pages/contact.html" class="btn-primary btn-xlarge">무료 상담 예약하기</a>
+            <div class="section-header">
+                <h2 class="section-title">a의 철학, shop의 전략</h2>
+                <p class="section-subtitle">ashop은 단순한 웹사이트 제작자가 아닌, 디지털 브랜드 아키텍트입니다.</p>
+            </div>
+            
+            <div class="philosophy-content">
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <span class="letter-a">a</span>
+                    </div>
+                    <h3>Aesthetic<br>미학</h3>
+                    <p>단순한 디자인이 아닌, 브랜드의 핵심 가치를 시각적 언어로 전환하는 미학적 해석.</p>
+                </div>
+                
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <span class="letter-s">s</span>
+                    </div>
+                    <h3>Strategic<br>전략적</h3>
+                    <p>비즈니스 목표에 맞춘 체계적 접근. 모든 픽셀에 전략적 의도를 담습니다.</p>
+                </div>
+                
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <span class="letter-h">h</span>
+                    </div>
+                    <h3>Holistic<br>종합적</h3>
+                    <p>브랜드 아이덴티티부터 사용자 경험까지, 분절되지 않은 통합적 솔루션.</p>
+                </div>
+                
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <span class="letter-p">p</span>
+                    </div>
+                    <h3>Presence<br>존재감</h3>
+                    <p>단순한 온라인 공간이 아닌, 고객의 마음에 각인되는 지속 가능한 디지털 존재감.</p>
+                </div>
+            </div>
+            
+            <div class="philosophy-statement">
+                <p class="statement">
+                    "ashop은 <strong>진정성 있는 디지털 존재감을 종합적으로 구축하는 전략적 미학 작업실</strong>입니다.<br>
+                    우리는 단순히 '홈페이지를 만드는' 것이 아니라, 당신의 브랜드가 시장에서 <strong>기억되고, 사랑받고, 성장할 수 있는 기반</strong>을 설계합니다."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 무료 견적 신청 섹션 (새로운 폼) -->
+    <section class="estimate-section" id="estimate">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">무료 견적 신청</h2>
+                <p class="section-subtitle">프로젝트 요구사항을 알려주시면 24시간 내로 상세 견적을 발송해 드립니다.</p>
+            </div>
+            
+            <div class="estimate-form-wrapper">
+                <form id="estimateForm" class="estimate-form">
+                    <input type="hidden" name="form-type" value="estimate-request">
+                    
+                    <!-- 섹션 1: 기본 정보 -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> 1. 기본 정보</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">이름 *</label>
+                                <input type="text" id="name" name="name" required placeholder="홍길동">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">이메일 *</label>
+                                <input type="email" id="email" name="email" required placeholder="example@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">전화번호</label>
+                                <input type="tel" id="phone" name="phone" placeholder="010-1234-5678">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">회사명 / 브랜드명</label>
+                                <input type="text" id="company" name="company" placeholder="예) 플랜씨랩 치과, ○○ 로컵">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 섹션 2: 업종 / 홈페이지 종류 -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-briefcase"></i> 2. 업종 / 홈페이지 종류</h3>
+                        <div class="form-group">
+                            <label for="industry">업종 선택 *</label>
+                            <select id="industry" name="industry" required>
+                                <option value="">업종을 선택하세요</option>
+                                <option value="의료/병원">의료/병원</option>
+                                <option value="법률/컨설팅">법률/컨설팅</option>
+                                <option value="교육">교육</option>
+                                <option value="리테일/패션">리테일/패션</option>
+                                <option value="F&B">F&B</option>
+                                <option value="테크/스타트업">테크/스타트업</option>
+                                <option value="기타">기타</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>홈페이지 유형 * (복수 선택 가능)</label>
+                            <div class="checkbox-group-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="website-type" value="브랜드 소개형"> 브랜드 소개형
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="website-type" value="예약·상담 중심"> 예약·상담 중심
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="website-type" value="상품 판매(결제)형"> 상품 판매(결제)형
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="website-type" value="랜딩 페이지(광고용)"> 랜딩 페이지(광고용)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="website-type" value="블로그/콘텐츠형"> 블로그/콘텐츠형
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="website-type" value="기타"> 기타
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 섹션 3: 규모 / 페이지 수 -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-sitemap"></i> 3. 규모 / 페이지 수</h3>
+                        <div class="form-group">
+                            <label>예상 페이지 수 *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="page-count" value="5페이지 이하" required> 5페이지 이하
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="page-count" value="6~10페이지"> 6~10페이지
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="page-count" value="11~20페이지"> 11~20페이지
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="page-count" value="20페이지 이상"> 20페이지 이상
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 섹션 4: 디자인 스타일 & 레퍼런스 -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-palette"></i> 4. 디자인 스타일 & 레퍼런스</h3>
+                        <div class="form-group">
+                            <label>원하는 분위기 * (복수 선택 가능)</label>
+                            <div class="checkbox-group-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="design-style" value="심플 / 미니멀"> 심플 / 미니멀
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="design-style" value="고급 / 프리미엄"> 고급 / 프리미엄
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="design-style" value="튀는 컬러 / 역동적"> 튀는 컬러 / 역동적
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="design-style" value="차분하고 신뢰감 있는"> 차분하고 신뢰감 있는
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="design-style" value="기타"> 기타
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="references">참고하고 싶은 홈페이지 주소 (최대 3개, 선택)</label>
+                            <textarea id="references" name="references" rows="2" placeholder="https://예시사이트.com"></textarea>
+                            <small>참고할 사이트의 URL을 입력해주세요. (쉼표로 구분)</small>
+                        </div>
+                    </div>
+                    
+                    <!-- 섹션 5: 필요한 기능 -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-cogs"></i> 5. 필요한 기능</h3>
+                        <div class="form-group">
+                            <label>필요한 기능 선택 (복수 선택 가능)</label>
+                            <div class="checkbox-group-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="회원가입/로그인"> 회원가입 / 로그인
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="온라인 예약/상담 신청"> 온라인 예약 / 상담 신청
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="상품 결제(카드, 계좌 등)"> 상품 결제(카드, 계좌 등)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="게시판/블로그"> 게시판 / 블로그
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="다국어 지원"> 다국어 지원
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="관리자 페이지"> 관리자 페이지(콘텐츠 직접 수정)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="챗봇/AI 연동"> 챗봇 / AI 연동
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="기타"> 기타
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 섹션 6: 일정 · 예산 -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-calendar-alt"></i> 6. 일정 · 예산</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>희망 오픈 시기 *</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="timeline" value="가능한 빨리" required> 가능한 빨리
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="timeline" value="2주 이내"> 2주 이내
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="timeline" value="1개월 이내"> 1개월 이내
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="timeline" value="기타"> 기타
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">예상 예산 범위</label>
+                                <input type="text" id="budget" name="budget" placeholder="예) 500-1000만원">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 섹션 7: 프로젝트 설명 -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-file-alt"></i> 7. 프로젝트 설명</h3>
+                        <div class="form-group">
+                            <label for="project-desc">현재 상황과 원하는 점을 자유롭게 적어주세요 *</label>
+                            <textarea id="project-desc" name="project-desc" rows="5" required placeholder="예) 병원 리브랜딩 중이라 새 홈페이지가 필요합니다. 예약 가능과 블로그, 병원 소개 페이지가 중요하고, 모바일에서 보기 좋게 만들어졌으면 합니다."></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- 동의 및 제출 -->
+                    <div class="form-section">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="privacyAgree" name="privacyAgree" required>
+                            <label for="privacyAgree">
+                                개인정보 수집 및 이용에 동의합니다
+                                <a href="#privacy" class="link">(개인정보처리방침)</a>
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="marketingConsent" name="marketingConsent">
+                            <label for="marketingConsent">
+                                이메일로 마케팅 정보를 받겠습니다
+                            </label>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i> 견적 요청하기
+                            </button>
+                            <p class="form-notice">
+                                제출 후 24시간 이내에 담당자가 연락드립니다.
+                            </p>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- 성공 메시지 -->
+                <div id="formSuccess" class="success-message" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>견적 요청이 완료되었습니다!</h3>
+                    <p>소중한 신청 감사합니다. 24시간 이내에 담당자가 상세 견적과 함께 연락드리겠습니다.</p>
+                    <button onclick="location.reload()" class="btn-primary">
+                        <i class="fas fa-plus"></i> 추가 문의하기
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -265,49 +369,46 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="logo-icon">FS</span>
-                        <span class="logo-text">FrameStory</span>
-                    </div>
-                    <p class="footer-tagline">스토리가 판매로 이어지는 디지털 프레임워크</p>
+                    <a href="/" class="footer-logo">ashop</a>
+                    <p class="footer-tagline">Architecting Digital Presence</p>
+                    <p class="footer-philosophy">진정성 있는 디지털 존재감을 종합적으로 구축하는 전략적 미학 작업실</p>
                 </div>
                 
                 <div class="footer-links">
-                    <div class="link-group">
+                    <div class="footer-column">
+                        <h4>문의</h4>
+                        <p><i class="fas fa-envelope"></i> contact@ashop.design</p>
+                        <p><i class="fas fa-phone"></i> 02-1234-5678</p>
+                    </div>
+                    
+                    <div class="footer-column">
                         <h4>서비스</h4>
-                        <a href="pages/services.html#storyframe">StoryFrame</a>
-                        <a href="pages/services.html#strategyframe">StrategyFrame</a>
-                        <a href="pages/services.html#webframe">WebFrame</a>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>회사</h4>
-                        <a href="pages/about.html">소개</a>
-                        <a href="pages/process.html">프로세스</a>
-                        <a href="pages/portfolio.html">포트폴리오</a>
-                        <a href="pages/contact.html">연락처</a>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>리소스</h4>
-                        <a href="#">블로그</a>
-                        <a href="#">케이스 스터디</a>
-                        <a href="pages/pricing.html">가격</a>
+                        <a href="#philosophy">브랜드 철학</a>
+                        <a href="#services">서비스 소개</a>
+                        <a href="#process">제작 프로세스</a>
+                        <a href="#estimate">견적 신청</a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>© 2023 FrameStory. All rights reserved.</p>
-                <div class="footer-contacts">
-                    <span>contact@framestory.com</span>
-                    <span>02-1234-5678</span>
+                <p>© 2024 ashop. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#privacy">개인정보처리방침</a>
+                    <a href="#terms">이용약관</a>
                 </div>
             </div>
         </div>
     </footer>
-
+    
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script src="js/form-handler.js"></script>
+    
+    <!-- Google Sheets 연동 설정 -->
+    <script>
+        // Google Apps Script 배포 URL (제공된 URL로 미리 설정됨)
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxaqrNwqBnzdXO0QsVFSDmAJz-Ul_k-0s_6w3a_Fd5UXtPsdUntZBGdH3fIRgO_B7jYNA/exec';
+    </script>
 </body>
-</html>
+    </html>
