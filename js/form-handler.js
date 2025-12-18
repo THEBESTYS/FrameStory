@@ -1,34 +1,57 @@
+// form-handler.js - 1번 홈페이지에서 사용하는 것과 동일한 코드
+// 단, const GOOGLE_SCRIPT_URL = ... 줄은 제거 (HTML에서 선언)
 
-async sendToGoogleSheets(data) {
-  // 🔍 디버깅: 전송 전 데이터 확인
-  console.log('📤 sendToGoogleSheets 호출, 전송할 데이터:', data);
-  console.log('🔗 전송할 URL:', GOOGLE_SCRIPT_URL);
- 
-  // 1. JSON 객체를 URLSearchParams로 변환
-  const params = new URLSearchParams();
-  for (const key in data) {
-    // 배열인 경우 문자열로 변환
-    if (Array.isArray(data[key])) {
-      params.append(key, data[key].join(', '));
-    } else {
-      params.append(key, data[key]);
+class FormHandler {
+  constructor() {
+    this.form = document.getElementById('estimateForm');
+    if (!this.form) return;
+    
+    this.init();
+  }
+
+  init() {
+    this.form.addEventListener('submit', this.handleSubmit.bind(this));
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault();
+    
+    // 간단한 FormData 처리 (1번 방식)
+    const formData = new FormData(this.form);
+    const params = new URLSearchParams();
+    
+    // 기본 필드
+    for (const [key, value] of formData.entries()) {
+      params.append(key, value);
+    }
+    
+    // 체크박스 그룹
+    const websiteTypes = Array.from(this.form.querySelectorAll('input[name="website-type"]:checked'))
+      .map(cb => cb.value).join(', ');
+    if (websiteTypes) params.append('website-type', websiteTypes);
+    
+    // Google Script로 전송 (1번과 완전히 동일)
+    try {
+      await fetch(window.GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: params.toString()
+      });
+      
+      // 성공 처리
+      document.getElementById('estimateForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+      
+    } catch (error) {
+      alert('제출 중 오류가 발생했습니다. 다시 시도해주세요.');
     }
   }
-  
-  // 🔍 디버깅: 변환된 파라미터 확인
-  console.log('📝 URLSearchParams 결과:', params.toString());
-  
-  // 2. Content-Type을 application/x-www-form-urlencoded로 변경
-  const response = await fetch(GOOGLE_SCRIPT_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: params.toString()
-  });
-  
-  console.log('📨 fetch 요청 완료 (no-cors 모드이므로 응답 내용 확인 불가)');
-  return response;
 }
-  
+
+// 초기화
+document.addEventListener('DOMContentLoaded', () => {
+  new FormHandler();
+});
