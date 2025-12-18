@@ -1,7 +1,7 @@
 // form-handler.js - Google Sheets 연동 (제공된 URL로 미리 설정됨)
 
 // 🔥 중요: Google Apps Script 배포 URL (제공된 URL)
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxaqrNwqBnzdXO0QsVFSDmAJz-Ul_k-0s_6w3a_Fd5UXtPsdUntZBGdH3fIRgO_B7jYNA/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKeEtnfDPSuZunaw8nYVBWA9WnDeEwHi_G4zu6g_KlhLCisq8kmAiZeVs1l4N4yhS6/exec';
 
 class FormHandler {
   constructor() {
