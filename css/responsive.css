@@ -1,126 +1,174 @@
-/* responsive.css */
+/* ===== RESPONSIVE DESIGN ===== */
 
 /* 태블릿 (768px ~ 1024px) */
 @media (max-width: 1024px) {
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  
-  .hero-visual {
-    position: relative;
-    width: 100%;
-    margin-top: 40px;
-    transform: none;
-    top: auto;
-    right: auto;
-  }
-  
-  .philosophy-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-visual {
+        max-width: 100%;
+        order: -1;
+    }
+    
+    .hero-image {
+        transform: none;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .philosophy-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .checkbox-group-grid,
+    .radio-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* 모바일 (768px 이하) */
+/* 모바일 (576px ~ 768px) */
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: var(--color-white);
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    gap: 15px;
-  }
-  
-  .nav-menu.active {
-    display: flex;
-  }
-  
-  .menu-toggle {
-    display: block;
-  }
-  
-  .hero-section {
-    padding: 120px 0 60px;
-    text-align: center;
-  }
-  
-  .hero-title {
-    font-size: 2.2rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .hero-buttons a {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .philosophy-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .form-section {
-    padding: 30px 20px;
-  }
-  
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .checkbox-group-grid,
-  .radio-group {
-    flex-direction: column;
-    gap: 10px;
-  }
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-section {
+        padding: 140px 0 80px;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .philosophy-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .estimate-form-wrapper {
+        padding: 30px 20px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .checkbox-group-grid,
+    .radio-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-statement {
+        padding: 30px 20px;
+    }
+    
+    .statement {
+        font-size: 1.1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-/* 작은 모바일 (480px 이하) */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.8rem;
-  }
-  
-  .section-title {
-    font-size: 1.8rem;
-  }
-  
-  .form-section h3 {
-    font-size: 1.1rem;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  
-  .footer-legal {
-    flex-direction: column;
-    gap: 10px;
-  }
+/* 작은 모바일 (~576px) */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .form-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-submit {
+        padding: 16px 30px;
+        font-size: 1rem;
+    }
+    
+    .success-message {
+        padding: 40px 20px;
+    }
 }
 
-/* 다크 모드 대응 (옵션) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #FFFFFF;
-    --color-secondary: #CCCCCC;
-    --color-light: #1A1A1A;
-    --color-white: #2D2D2D;
-    --color-border: #444444;
-  }
-  
-  /* 입력 필드는 여전히 밝게 유지 */
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    background: #FFFFFF !important;
-    color: #333333 !important;
-  }
+/* 매우 작은 모바일 (~400px) */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .logo-mark {
+        width: 32px;
+        height: 32px;
+    }
 }
