@@ -1,5 +1,4 @@
-// form-handler.js - 1번 홈페이지에서 사용하는 것과 동일한 코드
-// 단, const GOOGLE_SCRIPT_URL = ... 줄은 제거 (HTML에서 선언)
+// 2번 홈페이지의 form-handler.js를 이 코드로 완전히 교체
 
 class FormHandler {
   constructor() {
@@ -16,23 +15,33 @@ class FormHandler {
   async handleSubmit(e) {
     e.preventDefault();
     
-    // 간단한 FormData 처리 (1번 방식)
+    // v3 방식: 간단한 FormData 처리
     const formData = new FormData(this.form);
     const params = new URLSearchParams();
     
-    // 기본 필드
+    // 1. 기본 필드 추가
     for (const [key, value] of formData.entries()) {
-      params.append(key, value);
+      if (key !== 'website-type' && key !== 'design-style' && key !== 'features') {
+        params.append(key, value);
+      }
     }
     
-    // 체크박스 그룹
+    // 2. 체크박스 그룹 처리 (v3 방식)
     const websiteTypes = Array.from(this.form.querySelectorAll('input[name="website-type"]:checked'))
       .map(cb => cb.value).join(', ');
     if (websiteTypes) params.append('website-type', websiteTypes);
     
-    // Google Script로 전송 (1번과 완전히 동일)
+    const designStyles = Array.from(this.form.querySelectorAll('input[name="design-style"]:checked'))
+      .map(cb => cb.value).join(', ');
+    if (designStyles) params.append('design-style', designStyles);
+    
+    const features = Array.from(this.form.querySelectorAll('input[name="features"]:checked'))
+      .map(cb => cb.value).join(', ');
+    if (features) params.append('features', features);
+    
+    // 3. Google Script로 전송 (v3 방식)
     try {
-      await fetch(window.GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -41,11 +50,12 @@ class FormHandler {
         body: params.toString()
       });
       
-      // 성공 처리
+      // 성공 처리 (2번 홈페이지의 UI에 맞게)
       document.getElementById('estimateForm').style.display = 'none';
-      document.getElementById('successMessage').style.display = 'block';
+      document.getElementById('formSuccess').style.display = 'block';
       
     } catch (error) {
+      console.error('제출 오류:', error);
       alert('제출 중 오류가 발생했습니다. 다시 시도해주세요.');
     }
   }
